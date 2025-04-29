@@ -16,6 +16,7 @@ gem "thruster", require: false# Add HTTP asset caching/compression and X-Sendfil
 gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 
 group :development, :test do
+  gem "amazing_print", "~> 1.6"
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
   gem "rubocop-rails-omakase", require: false   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "ruby-lsp", "~> 0.23.15"

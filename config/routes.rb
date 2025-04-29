@@ -10,5 +10,13 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "posts#index"
+
+  resources :posts
+
+  # automagically added, see: config/initializers/marksmith.rb
+  #
+  # Rails.application.routes.draw do
+  #   mount Marksmith::Engine => Marksmith.configuration.mount_path
+  # end
 end

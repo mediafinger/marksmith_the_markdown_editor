@@ -1,0 +1,20 @@
+<div class="post">
+  <h1><%= @post.title %></h1>
+  <p class="timestamp"><%= @post.created_at.strftime("%B %d, %Y") %></p>
+
+  <div class="post-content">
+    <%= sanitize(
+      @post.body,
+      tags: %w(table th tr td span) +
+        ActionView::Helpers::SanitizeHelper.sanitizer_vendor.safe_list_sanitizer.allowed_tags.to_a
+    ) %>
+  </div>
+  <% if @post.created_at != @post.updated_at %>
+    <p class="timestamp"><%= @post.updated_at.strftime("%B %d, %Y") %></p>
+  <% end%>
+</div>
+
+<div class="actions">
+  <%= link_to "Edit", edit_post_path(@post) %> |
+  <%= link_to "Back to Posts", posts_path %>
+</div>
