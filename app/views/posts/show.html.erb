@@ -3,11 +3,7 @@
   <p class="timestamp"><%= @post.created_at.strftime("%B %d, %Y") %></p>
 
   <div class="post-content">
-    <%= sanitize(
-      @post.body,
-      tags: %w(table th tr td span) +
-        ActionView::Helpers::SanitizeHelper.sanitizer_vendor.safe_list_sanitizer.allowed_tags.to_a
-    ) %>
+    <%== marksmithed @post.body %>
   </div>
   <% if @post.created_at != @post.updated_at %>
     <p class="timestamp"><%= @post.updated_at.strftime("%B %d, %Y") %></p>

@@ -15,9 +15,18 @@
     <%= form.text_field :title %>
   </div>
 
+
+
   <div class="field">
     <%= form.label :body %>
-    <%= form.text_area :body, value: @post.body %>
+    <%= form.marksmith :body,
+      disabled: false,
+      enable_file_uploads: false,
+      # extra_preview_params: { },
+      placeholder: "Write your best markdown here.",
+      upload_url: nil,
+      value: @post.body
+    %>
   </div>
 
   <div class="actions">

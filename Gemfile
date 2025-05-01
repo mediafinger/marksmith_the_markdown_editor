@@ -19,6 +19,7 @@ gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.
 group :development, :test do
   gem "amazing_print", "~> 1.6"
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  gem "hotwire-spark", ">= 0.1.4" # Hotwire LiveReload for Rails
   gem "rubocop-rails-omakase", require: false   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "ruby-lsp", "~> 0.23.15"
   gem "ruby-lsp-rails", "~> 0.4.1"
