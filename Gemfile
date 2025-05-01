@@ -7,6 +7,7 @@ gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/
 gem "kamal", require: false# Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
 gem "marksmith", "~> 0.4.4" # A markdown editor for Rails [https://github.com/avo-hq/marksmith]
 gem "pg", "~> 1.1"
+gem "propshaft" # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "puma", ">= 5.0"
 gem "solid_cable"
 gem "solid_cache"
