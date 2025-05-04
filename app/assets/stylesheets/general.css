@@ -1,0 +1,19 @@
+header {
+}
+
+main {
+  padding: 0rem 1rem;
+  margin-bottom: 2rem;
+}
+
+footer {
+  text-align: center;
+}
+
+img {
+  border-radius: 0.5rem;
+}
+
+.field.actions {
+  margin-top: 1rem;
+}

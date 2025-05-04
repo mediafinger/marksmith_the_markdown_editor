@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html>
+
+<% if Current.display_mode.present? %>
+  <html data-theme="<%= Current.display_mode %>">
+<% else %>
+  <html>
+<% end %>
+
   <head>
     <title><%= content_for(:title) || "Markdown Editor" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -19,12 +25,23 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.green.min.css" %>
     <%= stylesheet_link_tag "marksmith" %>
 
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <% # render partial: "layouts/header"
+    %>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <% # render partial: "layouts/footer"
+    %>
+
   </body>
 </html>

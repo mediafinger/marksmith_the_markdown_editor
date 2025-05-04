@@ -1,13 +1,16 @@
 <div class="post">
   <h1><%= @post.title %></h1>
-  <p class="timestamp"><%= @post.created_at.strftime("%B %d, %Y") %></p>
+  <p class="timestamp">
+    created at: <%= @post.created_at.strftime("%Y-%m-%d %H:%M") %>
+  <% if @post.created_at != @post.updated_at %>
+    <br />
+    updated at: <%= @post.updated_at.strftime("%Y-%m-%d %H:%M") %>
+  <% end%>
+  </p>
 
   <div class="post-content">
     <%== marksmithed @post.body %>
   </div>
-  <% if @post.created_at != @post.updated_at %>
-    <p class="timestamp"><%= @post.updated_at.strftime("%B %d, %Y") %></p>
-  <% end%>
 </div>
 
 <div class="actions">
