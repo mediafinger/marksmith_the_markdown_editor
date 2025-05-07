@@ -21,7 +21,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
   gem "hotwire-spark", ">= 0.1.4" # Hotwire LiveReload for Rails
   gem "rubocop-rails-omakase", require: false   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-  gem "ruby-lsp", "~> 0.23.15"
+  gem "ruby-lsp", "~> 0.23.17"
   gem "ruby-lsp-rails", "~> 0.4.1"
 end
 
