@@ -22,7 +22,7 @@ group :development, :test do
   gem "hotwire-spark", ">= 0.1.4" # Hotwire LiveReload for Rails
   gem "rubocop-rails-omakase", require: false   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "ruby-lsp", "~> 0.23.15"
-  gem "ruby-lsp-rails", "~> 0.4.1"
+  gem "ruby-lsp-rails", "~> 0.4.3"
 end
 
 group :development do
