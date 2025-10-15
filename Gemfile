@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "rails", "~> 8.0.2"
 
-gem "commonmarker", "~> 2.3" # A markdown parser
+gem "commonmarker", "~> 2.5" # A markdown parser
 gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "kamal", require: false# Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
 gem "marksmith", "~> 0.4.4" # A markdown editor for Rails [https://github.com/avo-hq/marksmith]
